@@ -5,5 +5,3 @@ for x in range(0, 100):
             print('{:02d}'.format(x))
         else:
             print('{:02d}'.format(x), end=', ')
-    elif x == 0:
-        print('{:02d}'.format(x), end=', ')

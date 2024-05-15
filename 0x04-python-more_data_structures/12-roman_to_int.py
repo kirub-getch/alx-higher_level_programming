@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # 12-roman_to_int.py
-# Brennan D Baraban <375@holbertonschool.com>
 
 
 def roman_to_int(roman_string):
@@ -22,12 +21,11 @@ def roman_to_int(roman_string):
 
     for i in range(len(roman_string)):
         if roman_dict.get(roman_string[i], 0) == 0:
-            return (0)
-
-        if (i != (len(roman_string) - 1) and
-            roman_dict[roman_string[i]] < roman_dict[roman_string[i + 1]]):
+           return (0)
+        
+        if (i != (len(roman_string) - 1) and roman_dict[roman_string[i]] < roman_dict[roman_string[i + 1]]):
             num += roman_dict[roman_string[i]] * -1
-
+            
         else:
             num += roman_dict[roman_string[i]]
     return (num)

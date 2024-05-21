@@ -17,16 +17,6 @@ def roman_to_int(roman_string):
             "D": 500,
             "M": 1000
     }
-    num = 0
-
-    for i in range(len(roman_string)):
-        if roman_dict.get(roman_string[i], 0) == 0:
-            return (0)
-
-        if (i != (len(roman_string) - 1) and
-            roman_dict[roman_string[i]] < roman_dict[roman_string[i + 1]]):
-            num += roman_dict[roman_string[i]] * -1
-
-        else:
-            num += roman_dict[roman_string[i]]
-    return (num)
+    my_list= list(map(lambda x : roman_dict[x] , roman_string )) 
+    roman_int = sum(my_list)
+    return roman_int

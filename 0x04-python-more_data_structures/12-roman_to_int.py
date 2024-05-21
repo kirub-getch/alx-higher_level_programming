@@ -17,6 +17,14 @@ def roman_to_int(roman_string):
             "D": 500,
             "M": 1000
     }
-    my_list = list(map(lambda x: roman_dict[x], roman_string))
-    roman_int = sum(my_list)
-    return roman_int
+    total = 0
+    prev_value = 0
+    for char in reversed(roman_string.upper()):
+        value = roman_dict.get(char, 0)
+        if value >= prev_value:
+            total += value
+        else:
+            total -= value
+        prev_value = value
+
+    return total

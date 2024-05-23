@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 # 102-complex_delete.py
-# Brennan D Baraban <375@holbertonschool.com>
-
 
 def complex_delete(a_dictionary, value):
     """Delete keys with a specific value in a dictionary."""
